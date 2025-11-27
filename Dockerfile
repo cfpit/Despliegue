@@ -22,6 +22,9 @@ COPY src src
 # Build the application
 RUN ./mvnw clean package -DskipTests
 
+# Find the JAR file and copy it
+RUN cp target/*.jar app.jar
+
 # Expose port
 EXPOSE 8080
 
@@ -29,4 +32,4 @@ EXPOSE 8080
 ENV SPRING_PROFILES_ACTIVE=prod
 
 # Run the application
-CMD ["java", "-jar", "target/*.jar"]
+CMD ["java", "-jar", "app.jar"]
