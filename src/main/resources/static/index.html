@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Personas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+
+  <div id="dolarInfo" class="container-fluid py-4 px-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div id="dolarInfoContent" class="card bg-light border-0 shadow-sm p-3 rounded-lg">
+                <div class="card-header">
+                    <h2 class="text-center mb-0">Tipo de Cambio Dólar Blue</h2>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title mb-0">Información del Dólar</h3>
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <p><strong>Compras:</strong> <span id="compra"></span></p>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <p><strong>Ventas:</strong> <span id="venta"></span></p>
+                        </div>
+                    </div>
+                    <h4 class="mt-3 mb-0">Fecha de Actualización</h4>
+                    <p><span id="fechaActualizacion"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="container-fluid p-5">
+    <h1 class="text-center">Registro de Personas</h1>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" id="busqueda" placeholder="Buscar por nombre">
+      <button class="btn btn-primary" onclick="buscarPersonas()">Buscar</button>
+  </div>
+  </div>
+
+  <div class="container-fluid ">
+    <div class="d-flex justify-content-center">
+      <input type="button" id="myBtn" value="Crear Persona" class="btn btn-info text-white fs-3 p-2 w-75">
+    </div>
+    <div class="table-responsive">
+
+
+      <table class="table w-75 mx-auto my-4">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Eliminar/Modificar</th>
+          </tr>
+        </thead>
+        <tbody id="tablaPersonas">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div>
+        <div>
+          <div class="border-bottom border-success mb-4">
+            <h2 class="text-center py-4" id="tituloModal"></h2>
+          </div>
+          <div>
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputEmail4">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputPassword4">Edad</label>
+                  <input type="number" class="form-control" id="edad" placeholder="Edad">
+                </div>
+              </div>
+          </div>
+
+          <button type="button" id="btnGuardar" class="btn btn-danger fs-5 w-100 py-3">Guardar Persona</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="index.js"></script>
